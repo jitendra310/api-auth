@@ -21,7 +21,9 @@
 
     
     $(document).ready(function() {
-        let url = "http://127.0.0.1:8000/api/auth/getCityData";
+        // let url = "http://127.0.0.1:8000/api/auth/getCityData";
+        let url = "http://apiauth-env.eba-ea2yceyk.ap-south-1.elasticbeanstalk.com/citylist/api/auth/getCityData";
+
         getUrl(url);
     });
 
