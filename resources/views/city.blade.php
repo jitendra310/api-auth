@@ -8,6 +8,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
+    <h2>Data will load when Bearer token updated</h2>
+
    <table id="cities" border="1">
    </table>
 
@@ -33,7 +35,7 @@
             type: 'GET',
             contentType: 'application/json',
             headers: {                               
-                'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzMzcxODQ5OSwiZXhwIjoxNjMzNzIyMDk5LCJuYmYiOjE2MzM3MTg0OTksImp0aSI6IjlJTFNDanJyWjlVYzhiWGsiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TcNLAAqA1daNhf4smYwOqewxxNvqwocBaCfhUf6hnZk'
+                'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hcGlhdXRoLWVudi5lYmEtZWEyeWNleWsuYXAtc291dGgtMS5lbGFzdGljYmVhbnN0YWxrLmNvbVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzMzc5NTIwOCwiZXhwIjoxNjMzNzk4ODA4LCJuYmYiOjE2MzM3OTUyMDgsImp0aSI6IkpoMmJlSFViM1RkaWxkMjYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.KnWXAZZ60smH8dywfUfxk8Nju7RI4QbCWDTlodztqLc'
             },
             success: function (result) {
                     // CallBack(result);
