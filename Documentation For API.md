@@ -2,7 +2,7 @@ Documentation For API
 ========================
 
 
-http://127.0.0.1:8000/api/auth/register
+http://apiauth-env.eba-ea2yceyk.ap-south-1.elasticbeanstalk.com/api/auth/register
 add users:
 
 pass below parameter:
@@ -12,7 +12,7 @@ pass below parameter:
     name
 =======================================================================
 
-http://127.0.0.1:8000/api/auth/login
+http://apiauth-env.eba-ea2yceyk.ap-south-1.elasticbeanstalk.com/api/auth/login
 login:
     passs two parameter 
     email
@@ -21,21 +21,31 @@ login:
 Here will receive bearer token, use this token for this API: getCityData , getdata
  ===========================================================================
 
-http://127.0.0.1:8000/api/auth/getdata
+http://apiauth-env.eba-ea2yceyk.ap-south-1.elasticbeanstalk.com/api/auth/logout
+
+logout:
+
+pass one parameter from headers with POST request:
+    Authorization => Bearer <token>
+
+
+ ================================================================================
+
+http://apiauth-env.eba-ea2yceyk.ap-south-1.elasticbeanstalk.com/api/auth/getdata
 
 pass one parameter from headers:
     Authorization => Bearer <token>
 
 ==============================================================================
 
-http://127.0.0.1:8000/api/auth/getCityData
+http://apiauth-env.eba-ea2yceyk.ap-south-1.elasticbeanstalk.com/api/auth/getCityData
 
 pass one parameter from headers:
     Authorization => Bearer <token>
 
 ==============================================================================
 
-For HTML view use this path: http://127.0.0.1:8000/citylist 
+For HTML view use this path: http://apiauth-env.eba-ea2yceyk.ap-south-1.elasticbeanstalk.com/citylist 
 
 
 but need to pass manually bearer token in this file: \api-auth\resources\views\city.blade.php

@@ -8,8 +8,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <h2>Data will load when Bearer token updated</h2>
-
+    <strong>Can logout using API :</strong> http://apiauth-env.eba-ea2yceyk.ap-south-1.elasticbeanstalk.com/api/auth/logout || (pass the Authorization from the headers with the Bearer token)
+    
+    <h2>Pagination Data</h2>
+    <h2>User : {{session('email')}}</h2>
    <table id="cities" border="1">
    </table>
 
@@ -19,7 +21,6 @@
 </body>
 <script>
 
-    
     $(document).ready(function() {
         // let url = "http://127.0.0.1:8000/api/auth/getCityData";
         let url = "http://apiauth-env.eba-ea2yceyk.ap-south-1.elasticbeanstalk.com/api/auth/getCityData";
@@ -28,16 +29,14 @@
     });
 
     function getUrl(url) {
-        // console.log(url);
-        // alert(url);
-
+        let bearerToken = "<?php echo session('bearerToken'); ?>";
         // please add Bearer token, from the login api.Ex. Bearer <token>
         $.ajax({
             url: url,
             type: 'GET',
             contentType: 'application/json',
             headers: {                               
-                'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9hcGlhdXRoLWVudi5lYmEtZWEyeWNleWsuYXAtc291dGgtMS5lbGFzdGljYmVhbnN0YWxrLmNvbVwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYzMzgxNjc1MSwiZXhwIjoxNjMzODIwMzUxLCJuYmYiOjE2MzM4MTY3NTEsImp0aSI6Ijh6Y2tkNlFkOUY5TXJjSFgiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.3-3n1vZIcpkl3G2aKB-9lQze4K8MZF4amjC5GSnLj4I'
+                'Authorization': 'Bearer '+ bearerToken
             },
             success: function (result) {
                     // CallBack(result);

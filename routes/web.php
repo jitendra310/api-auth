@@ -15,7 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('weblogin');
 });
- 
+
+
 Route::get('citylist', [CityController::class,'show']);
+Route::post('userwelogin', [CityController::class,'webLogin']);
+Route::view('weblogin','weblogin');
+            //URL,view page name
